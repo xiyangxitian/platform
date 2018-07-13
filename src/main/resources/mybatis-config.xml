@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <typeAliases>
+        <package name="com.ssm.user.entity"/>
+    </typeAliases>
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"></transactionManager>
+            <dataSource type="POOLED">
+                <!-- 已经在spring-mybatis中配置了，所以不需要再配置了。 -->
+                <property name="driverClass" value="${jdbc.driverClass}"></property>
+                <property name="jdbcUrl" value="${jdbc.jdbcUrl}"></property>
+                <property name="user" value="${jdbc.user}"></property>
+                <property name="password" value="${jdbc.password}"></property>
+                <property name="maxPoolSize" value="${c3p0.maxPoolSize}"></property>
+                <property name="minPoolSize" value="${c3p0.minPoolSize}"></property>
+                <property name="autoCommitOnClose" value="${c3p0.autoCommitOnClose}"></property>
+                <property name="checkoutTimeout" value="${c3p0.checkoutTimeout}"></property>
+                <property name="acquireRetryAttempts" value="${c3p0.acquireRetryAttempts}"></property>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <!--下面这两个可以写一个就够了 -->
+        <mapper resource="com/ssm/user/entity/*Mapper.xml"></mapper>
+        <!--<package name="com.ssm.user.entity"/>-->
+    </mappers>
+</configuration>
