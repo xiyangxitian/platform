@@ -22,6 +22,9 @@
 
 <body>
 <h1>SSM整合</h1>
+<br>
+<a href="user/towel">toWel...</a>
+<br>
 <form action="user/add" method="post">
     用户名：<input name="username"/> <br/>
     邮箱：<input name="email"/><br/>

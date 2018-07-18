@@ -1,4 +1,4 @@
-package com.user;
+package com.com.user;
 
 import com.ssm.user.dao.IUserDao;
 import com.ssm.user.entity.UserInfo;
@@ -19,7 +19,7 @@ public class TestUserInfo {
 
     @Test
     public void testSelectUser() {
-        long id = 1;
+        long id = 10;
         UserInfo user = dao.selectUser(id);
         System.out.println("name:" + user.getUsername());
     }

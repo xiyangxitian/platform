@@ -52,6 +52,8 @@ public class UserController {
 
     @RequestMapping("/towel")
     public String toWelce(HttpServletRequest request, HttpServletResponse response) {
+
+        System.out.println("towell......");
         return "/welcome";
     }
 
