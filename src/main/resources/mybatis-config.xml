@@ -25,7 +25,7 @@
     </environments>
     <mappers>
         <!--下面这两个可以写一个就够了 -->
-        <mapper resource="com/ssm/user/entity/*Mapper.xml"></mapper>
-        <!--<package name="com.ssm.user.entity"/>-->
+        <!-- <mapper resource="com/ssm/user/entity/*Mapper.xml"></mapper>-->
+        <package name="com.ssm.user.dao"/>
     </mappers>
 </configuration>

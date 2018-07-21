@@ -19,7 +19,7 @@ public class TestUserInfo {
 
     @Test
     public void testSelectUser() {
-        long id = 10;
+        long id = 1;
         UserInfo user = dao.selectUser(id);
         System.out.println("name:" + user.getUsername());
     }
