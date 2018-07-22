@@ -1,63 +1,12 @@
-<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
-<%
-    String path = request.getContextPath();
-    String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
-    System.out.println("path:"+path);
-    System.out.println("basePath:"+basePath);
-%>
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
+<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:set var="ctxStatic" value="${pageContext.request.contextPath}/static"/>
+<c:set var="ctxPath" value="${pageContext.request.contextPath}"/>
+<html lang="zh-CN">
 <head>
-    <base href="<%=basePath%>">
-    <style type="text/css">
-        form{
-            margin:0px auto;
-            width:500px;
-            padding:20px;
-        }
-    </style>
-    <title></title>
+    <title>美惠金服</title>
 </head>
-
 <body>
-<h1>SSM整合</h1>
-<br>
-<a href="user/towel">toWel...</a>
-<br>
-<form action="user/add" method="post">
-    用户名：<input name="username"/> <br/>
-    邮箱：<input name="email"/><br/>
-    <input type="submit" value="save"/>
-</form>
-<br/>
-<a href="index1.jsp">去index1</a>
-<button id="wel" onclick="welCome();">welcome</button>
-<button id="towel" onclick="toWelClick();">towel</button>
+Hello World!
 </body>
-<script>
-    function welCome() {
-        debugger;
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function () {
-            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                document.getElementById("test").innerHTML = xmlhttp.responseText;
-            }
-        }
-        xmlhttp.open("POST", "user/wel", true);
-        xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    }
-
-    function toWelClick(){
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function () {
-            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                document.getElementById("test").innerHTML = xmlhttp.responseText;
-            }
-        }
-        xmlhttp.open("POST", "user/towel", true);
-        xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    }
-
-</script>
 </html>
