@@ -3,20 +3,26 @@ package com.ssm.user.entity;
 import java.util.Date;
 
 public class UserInfo {
+    //id
     private long id;
+    //邮箱
     private String email;
+    //密码
     private String password;
+    //用户名
     private String username;
-    private String role;
+    //权限名
+    private String role_name;
+    //权限id
+    private long role_id;
+    //状态
     private int status;
+    //注册时间
     private Date regTime;
-
-
-    public UserInfo() {
-        System.out.println("a1");
-        System.out.println("a2");
-        System.out.println("a3");
-    }
+    //注册ip
+    private String regIp;
+    //昵称
+    private String nickname;
 
     public long getId() {
         return id;
@@ -50,12 +56,20 @@ public class UserInfo {
         this.username = username;
     }
 
-    public String getRole() {
-        return role;
+    public String getRole_name() {
+        return role_name;
     }
 
-    public void setRole(String role) {
-        this.role = role;
+    public void setRole_name(String role_name) {
+        this.role_name = role_name;
+    }
+
+    public long getRole_id() {
+        return role_id;
+    }
+
+    public void setRole_id(long role_id) {
+        this.role_id = role_id;
     }
 
     public int getStatus() {
@@ -74,16 +88,20 @@ public class UserInfo {
         this.regTime = regTime;
     }
 
-    @Override
-    public String toString() {
-        return "UserInfo{" +
-                "id=" + id +
-                ", email='" + email + '\'' +
-                ", password='" + password + '\'' +
-                ", username='" + username + '\'' +
-                ", role='" + role + '\'' +
-                ", status=" + status +
-                ", regTime=" + regTime +
-                '}';
+    public String getRegIp() {
+        return regIp;
     }
+
+    public void setRegIp(String regIp) {
+        this.regIp = regIp;
+    }
+
+    public String getNickname() {
+        return nickname;
+    }
+
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
+    }
+
 }
