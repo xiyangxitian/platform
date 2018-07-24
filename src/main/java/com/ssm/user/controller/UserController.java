@@ -31,6 +31,11 @@ public class UserController {
         response.getWriter().close();
     }
 
+    @RequestMapping(value = "/myproject")
+    public String myproject(){
+        return "welcome";
+    }
+
     @RequestMapping("/add")
     public ModelAndView addUser(HttpServletRequest request, HttpServletResponse response) {
 
