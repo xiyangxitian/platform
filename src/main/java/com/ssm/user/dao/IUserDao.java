@@ -9,6 +9,8 @@ public interface IUserDao {
 
     UserInfo selectUser(long id);
 
+    UserInfo selectUserByNameAndPwd(String name,String pwd);
+
     void add(UserInfo info);
 
     List<UserInfo> findAll();

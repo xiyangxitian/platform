@@ -25,6 +25,17 @@ public class TestUserInfo {
     }
 
     @Test
+    public void testLogin() {
+        UserInfo user = dao.selectUserByNameAndPwd("admin","123");
+        if(user==null){
+            System.out.println("用户名或密码错误");
+        }else{
+            System.out.println("登录成功");
+            System.out.println("name:" + user);
+        }
+    }
+
+    @Test
     public void testFindAll() {
         List<UserInfo> all = dao.findAll();
         System.out.println("all: " + all);

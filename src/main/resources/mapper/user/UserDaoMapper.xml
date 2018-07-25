@@ -8,6 +8,10 @@
         SELECT * FROM user WHERE id = #{id}
     </select>
 
+    <select id="selectUserByNameAndPwd" resultType="com.ssm.user.entity.UserInfo">
+        SELECT * FROM user WHERE username=#{arg0} and password=#{arg1}
+    </select>
+
     <insert id="add" parameterType="com.ssm.user.entity.UserInfo" keyProperty="id" useGeneratedKeys="true">
         insert into user (username,email) values (#{username},#{email})
     </insert>
