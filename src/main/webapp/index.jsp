@@ -14,6 +14,7 @@ ${ctxPath}
 <a href="user/showUser?id=1">test url</a>
 <br>
 <a href="user/myproject">to myproject</a>
-
+<br>
+<a href="user/login">登录</a>
 </body>
 </html>

@@ -36,6 +36,15 @@ public class UserController {
         return "welcome";
     }
 
+    /**
+     * 去登录页面
+     * @return
+     */
+    @RequestMapping(value = "/tologin")
+    public String login(){
+        return "login";
+    }
+
     @RequestMapping("/add")
     public ModelAndView addUser(HttpServletRequest request, HttpServletResponse response) {
 
@@ -61,5 +70,16 @@ public class UserController {
         System.out.println("towell......");
         return "/welcome";
     }
+
+
+    @RequestMapping("/login")
+    public UserInfo login(HttpServletRequest request, HttpServletResponse response) {
+        String name = request.getParameter("name");
+        String pwd = request.getParameter("name");
+        UserInfo userInfo = userService.login(name, pwd);
+        return userInfo;
+    }
+
+
 
 }

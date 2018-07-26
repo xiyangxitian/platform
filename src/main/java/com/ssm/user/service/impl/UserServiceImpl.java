@@ -22,5 +22,8 @@ public class UserServiceImpl implements IUserService {
         userDao.add(userInfo);
     }
 
-
+    @Override
+    public UserInfo login(String name, String password) {
+        return userDao.selectUserByNameAndPwd(name, password);
+    }
 }
